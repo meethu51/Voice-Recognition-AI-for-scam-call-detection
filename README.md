@@ -1,9 +1,9 @@
-🎙️ VoiceGuard — Speaker Watchlist System (Sprint A)
+###🎙️ VoiceGuard — Speaker Watchlist System (Sprint A)###
 
 VoiceGuard is a demo-ready speaker recognition & watchlist system built with modern speech embeddings and vector search.
 Designed for real-time voice risk detection, forensics, and call screening pipelines.
 
-✨ Features
+##✨ Features##
 
 🔊 ECAPA speaker embeddings (SpeechBrain)
 
@@ -37,7 +37,7 @@ Audio Input
    │
    └─▶ Policy Engine (Shadow / Enforce)
 ```
-📋 Prerequisites
+###📋 Prerequisites###
 
 Python 3.10+
 
@@ -45,7 +45,7 @@ Docker (for Postgres + pgvector)
 
 FFmpeg (recommended for audio conversion)
 
-🚀 Quick Start
+##🚀 Quick Start##
 1️⃣ Clone the repository
 ```bash
 git clone https://github.com/meethu51/voice-recognition-ai.git
@@ -79,15 +79,15 @@ API: http://localhost:8000
 
 Docs (Swagger): http://localhost:8000/docs
 
-🧪 Scripts
+##🧪 Scripts##
 Script	Description
 scripts/enroll.py	Enroll a speaker into the watchlist
 scripts/score.py	Score an audio file against the DB
 scripts/forensic_report.py	Generate JSON/PDF reports
 scripts/Check.py	Health & sanity checks
-📁 Project Structure
+
 ```bash
-.
+📁 Project Structure.
 ├── api/            # FastAPI app
 ├── dsp/            # VAD & audio quality metrics
 ├── models/         # ECAPA + embedding logic
@@ -100,7 +100,7 @@ scripts/Check.py	Health & sanity checks
 └── README.md
 ```
 
-🔐 Configuration
+##🔐 Configuration##
 
 Copy the example config:
 ```bash
@@ -110,7 +110,7 @@ cp config.example.yaml config.yaml
 
 ⚠️ config.yaml is not tracked by Git — keep secrets safe.
 
-🧠 Design Notes
+##🧠 Design Notes##
 
 Shadow-mode by default — no automatic enforcement
 
@@ -120,7 +120,7 @@ Optimized for clarity & extensibility, not benchmark chasing
 
 Intended as a foundation for production-grade voice risk systems
 
-🛣️ Roadmap
+##🛣️ Roadmap##
 
  Replace proxy CM with real anti-spoof model
 
