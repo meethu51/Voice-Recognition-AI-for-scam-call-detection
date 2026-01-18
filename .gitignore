@@ -1,0 +1,41 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Virtual environments
+venv/
+.env
+.env.*
+
+# Config (real configs should NOT be committed)
+config.yaml
+
+# Audio files
+*.wav
+*.mp3
+*.flac
+
+# Reports / outputs
+reports/
+*.pdf
+*.json
+
+# Model weights
+*.pt
+*.pth
+*.onnx
+*.ckpt
+
+# Databases
+*.db
+*.sqlite3
+
+# IDE
+.vscode/
+.idea/
+
+# OS
+.DS_Store
+Thumbs.db
