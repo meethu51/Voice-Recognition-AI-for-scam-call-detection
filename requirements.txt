@@ -1,0 +1,22 @@
+#python -m venv .venv && source .venv/bin/activate
+#pip install --upgrade pip
+
+# Core
+pip install torch torchaudio fastapi uvicorn[standard] pydantic==2.* numpy scipy soundfile librosa
+
+# Speaker models (ECAPA via SpeechBrain)
+pip install speechbrain
+
+# VAD / quality
+pip install webrtcvad pyworld
+
+# DB
+pip install asyncpg sqlalchemy
+
+# (Optional) simple CM (anti-spoof) baseline
+pip install torchlibrosa
+
+pip install python-multipart>=0.0.9
+
+#torchcrepe
+pip install torchcrepe

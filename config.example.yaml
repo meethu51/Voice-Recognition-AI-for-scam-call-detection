@@ -1,0 +1,27 @@
+database:
+  url: "postgresql://voiceuser:devpass@localhost:5432/voice"
+
+models:
+  embedder_hf_id: "speechbrain/spkrec-ecapa-voxceleb"
+  # For Sprint B later: cm_model_id: "AASIST/..." etc.
+
+audio:
+  sample_rate: 16000
+
+runtime:
+  device: "cpu"   # "cuda" if you have a GPU
+
+policy:
+  # Gating for quality and CM (liveness)
+  min_voiced_sec: 2.0
+  min_snr_db: 10.0
+  min_voiced_ratio: 0.40
+  cm_gate: 0.50
+
+  # Similarity thresholds (cosine)
+  sim_thresholds:
+    high: 0.70    # strong match (shadow: would auto-hangup; active later)
+    medium: 0.50  # review
+
+ui:
+  show_debug_scores: true
